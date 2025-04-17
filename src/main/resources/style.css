@@ -1,0 +1,61 @@
+/* style.css */
+
+/* Style pour la barre latérale */
+.side-nav {
+    -fx-background-color: #e0f7fa;
+    -fx-padding: 20px;
+    -fx-spacing: 20px;
+}
+
+/* Style des boutons de la barre latérale */
+.side-nav .button {
+    -fx-background-color: #4fc3f7;
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+    -fx-border-radius: 8px;
+}
+
+.side-nav .button:hover {
+    -fx-background-color: #81d4fa;
+}
+
+/* Style du tableau de bord */
+.dashboard {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20px;
+}
+
+.dashboard .label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+/* Style pour le formulaire de Quiz */
+.quiz-form {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20px;
+}
+
+.quiz-form .label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.quiz-form .text-field {
+    -fx-font-size: 16px;
+    -fx-background-color: #e1f5fe;
+    -fx-border-color: #4fc3f7;
+    -fx-border-radius: 5px;
+    -fx-padding: 8px;
+}
+
+.quiz-form .button {
+    -fx-background-color: #4fc3f7;
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-border-radius: 8px;
+}
+
+.quiz-form .button:hover {
+    -fx-background-color: #81d4fa;
+}
