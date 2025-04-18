@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="GesUsers.ControllersGesUsers.GesUsersController"
+            prefHeight="500.0" prefWidth="800.0"
+            style="-fx-background-color: #e9f0f6;">
+
+    <VBox alignment="CENTER" spacing="30"
+          AnchorPane.topAnchor="50" AnchorPane.bottomAnchor="50"
+          AnchorPane.leftAnchor="150" AnchorPane.rightAnchor="150">
+
+        <!-- Titre principal -->
+        <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #051523;"
+               text="CRÉER TON PROFIL" />
+
+        <!-- Sous-titre -->
+        <Label style="-fx-font-size: 18px; -fx-text-fill: #7f8c8d;"
+               text="Choisissez votre type de profil" />
+
+        <!-- Conteneur des options -->
+        <HBox alignment="CENTER" spacing="80">
+
+            <!-- Carte Parent -->
+            <VBox alignment="CENTER" spacing="15" style="-fx-cursor: hand;">
+                <ImageView fx:id="parentImage"
+                           fitHeight="120" fitWidth="120"
+                           onMouseClicked="#redirectToParentSignUp"
+                           style="-fx-cursor: hand;"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="/images/parent_icon.png" />
+                    </image>
+                </ImageView>
+                <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #051523;"
+                       text="PARENT" />
+            </VBox>
+
+            <!-- Carte Enfant -->
+            <VBox alignment="CENTER" spacing="15" style="-fx-cursor: hand;">
+                <ImageView fx:id="childImage"
+                           fitHeight="120" fitWidth="120"
+                           onMouseClicked="#redirectToChildSignUp"
+                           style="-fx-cursor: hand;"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="/images/enf_icon.png" />
+                    </image>
+                </ImageView>
+                <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #051523;"
+                       text="ENFANT" />
+            </VBox>
+        </HBox>
+
+        <!-- Footer -->
+        <HBox alignment="CENTER" spacing="5" style="-fx-padding: 50 0 0 0;">
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;" text="Made with " />
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #f30000;" text="♥" />
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;" text=" by EduCare." />
+        </HBox>
+    </VBox>
+</AnchorPane>

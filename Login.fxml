@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="GesUsers.ControllersGesUsers.LoginController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <VBox alignment="CENTER" spacing="10" style="-fx-background-color: #e9f0f6; -fx-padding: 20;"
+          AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+        <!-- Titre principal -->
+        <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #051523;" text="Please sign in" />
+
+        <!-- TabPane pour choisir le type d'utilisateur -->
+        <TabPane style="-fx-background-color: transparent; -fx-tab-min-width: 100px; -fx-tab-max-width: 100px;"
+                 fx:id="userTabPane">
+            <tabs>
+                <!-- Onglet "Parent" -->
+                <Tab text="Parent" fx:id="parentTab" style="-fx-font-weight: bold;">
+                    <content>
+                        <GridPane hgap="10" vgap="15" style="-fx-padding: 20;">
+                            <columnConstraints>
+                                <ColumnConstraints percentWidth="40"/>
+                                <ColumnConstraints percentWidth="60"/>
+                            </columnConstraints>
+
+                            <Label text="Email" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                            <TextField fx:id="emailField" promptText="Entrez votre email" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                            <Label text="Mot de passe" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                            <PasswordField fx:id="passwrdField" promptText="Entrez votre mot de passe" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                        </GridPane>
+                    </content>
+                </Tab>
+
+                <!-- Onglet "Enfant" -->
+                <Tab text="Enfant" fx:id="enfantTab" style="-fx-font-weight: bold;">
+                    <content>
+                        <GridPane hgap="10" vgap="15" style="-fx-padding: 20;">
+                            <columnConstraints>
+                                <ColumnConstraints percentWidth="40"/>
+                                <ColumnConstraints percentWidth="60"/>
+                            </columnConstraints>
+
+                            <Label text="Username" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                            <TextField fx:id="usernameField" promptText="Entrez votre username" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                            <Label text="Code" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                            <PasswordField fx:id="passwordField" promptText="Entrez votre mot de passe" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                        </GridPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+
+        <!-- Bouton de soumission -->
+        <HBox alignment="CENTER" spacing="10" style="-fx-padding: 10 0 0 0;">
+            <Button text="Se connecter"
+                    style="-fx-font-size: 14px; -fx-pref-width: 200px; -fx-background-color: #043d63; -fx-text-fill: white; -fx-font-weight: bold;"
+                    fx:id="loginButton"
+                    />
+        </HBox>
+
+        <!-- Lien vers la page d'inscription -->
+        <HBox alignment="CENTER" spacing="5" style="-fx-padding: 5 0 0 0;">
+            <Hyperlink text="Signup"
+                       style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: red; -fx-underline: true;"
+                       fx:id="signupLink"/>
+        </HBox>
+
+        <!-- Footer -->
+        <HBox alignment="CENTER" spacing="5" style="-fx-padding: 20 0 0 0;">
+            <Label style="-fx-font-size: 12px; -fx-text-fill: #7f8c8d;" text="Made with " />
+            <Label style="-fx-font-size: 12px; -fx-text-fill: #f30000;" text="♥" />
+            <Label style="-fx-font-size: 12px; -fx-text-fill: #7f8c8d;" text=" by EduCare." />
+        </HBox>
+    </VBox>
+</AnchorPane>

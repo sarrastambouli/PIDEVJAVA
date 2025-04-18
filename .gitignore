@@ -36,3 +36,28 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+
+# Fichiers sensibles (secrets, tokens)
+.env
+*.key
+*.secret
+
+# Fichiers de configuration spécifiques (Twilio/HuggingFace)
+**/SMSService.java
+**/HuggingFaceService.java
+
+# Dossiers d'IDE (IntelliJ)
+.idea/
+*.iml
+*.ipr
+
+# Dossiers de compilation
+target/
+bin/
+out/
+build/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
